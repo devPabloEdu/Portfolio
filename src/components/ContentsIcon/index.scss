@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'tahoma';
+    src: url('../../fonts/tahoma/tahoma.ttf');
+}
+.DesktopIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    p{
+        font-family: 'tahoma', sans-serif; 
+        color: var(--white-color);
+        font-size: 12px;
+        font-weight: 600;
+          text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    }
+    cursor: pointer;
+}
+.DesktopIcons:active{
+}

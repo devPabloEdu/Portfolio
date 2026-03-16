@@ -1,0 +1,36 @@
+.footerWindowsClassName{
+    background: linear-gradient(#0c4d9c 1%,#0e73aa 6%,#1290c2,#1083c5 14%,#1075bd 19%,#0a73be 63%,#0c89d1 81%,#0d8bcf 88%,#0f8ad1,#1189d3,#137ed7,#095bc9);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttonWindows{
+    background: linear-gradient(180deg,#509d4f,#499e47 69.2%,#48b347),linear-gradient(180deg,#509d4f,#499e47 69.2%,#48b347);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--white-color);
+    border: none;
+    border-radius: 2px;
+    font-family: 'tahoma', sans-serif; 
+    font-size: 14px;
+    font-weight: 550;
+          text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 0.247),
+        1px -1px 0 rgba(0, 0, 0, 0.178),
+        -1px 1px 0 rgba(0, 0, 0, 0.233),
+        1px 1px 0 rgba(0, 0, 0, 0.226);
+}
+.buttonWindows:hover{
+    background: linear-gradient(180deg,#67c266,#68cf66 69.2%,#5dd35b),linear-gradient(180deg,#70c76e,#67ce66 69.2%,#66da64);
+}
+.endBarFooter{
+    color: var(--white-color);
+    padding: 14px;
+    font-family: 'tahoma', sans-serif; 
+    background: linear-gradient(#0c59b9 1%,#139ee9 6%,#18b5f2,#139beb 14%,#1290e8 19%,#0d8dea 63%,#0d9ff1 81%,#0f9eed 88%,#119be9,#1392e2,#137ed7,#095bc9);
+}

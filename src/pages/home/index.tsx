@@ -7,6 +7,7 @@ import cvIcon from '../../assets/desktopIcons/cv-icon-lg.webp';
 import projectsIcon from '../../assets/desktopIcons/folder-docs-icon-lg.webp';
 import skillsIcon from '../../assets/desktopIcons/Skills.webp';
 import contatoIcon from '../../assets/desktopIcons/contato.webp';
+import { FooterBar } from "../../components/FooterBar";
 
 const HomePage = (): React.ReactElement => {
   return (
@@ -25,6 +26,9 @@ const HomePage = (): React.ReactElement => {
             Contato
         </ContentsIcon>
       </Container>
+ 
+        <FooterBar>         
+        </FooterBar>
     </Section>
   );
 };

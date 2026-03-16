@@ -8,6 +8,7 @@ import projectsIcon from '../../assets/desktopIcons/folder-docs-icon-lg.webp';
 import skillsIcon from '../../assets/desktopIcons/Skills.webp';
 import contatoIcon from '../../assets/desktopIcons/contato.webp';
 import { FooterBar } from "../../components/FooterBar";
+import entreEmContatoIcon from '../../assets/desktopIcons/entrecontato.webp';
 
 const HomePage = (): React.ReactElement => {
   return (
@@ -24,6 +25,9 @@ const HomePage = (): React.ReactElement => {
         </ContentsIcon>
         <ContentsIcon imgSrc={contatoIcon} imgAlternativeTitle="Meios de Contato" id="content4">
             Contato
+        </ContentsIcon>
+        <ContentsIcon imgSrc={entreEmContatoIcon} imgAlternativeTitle="Entre em contato" id="content5">
+          Entre em contato
         </ContentsIcon>
       </Container>
  

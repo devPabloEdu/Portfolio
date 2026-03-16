@@ -1,6 +1,15 @@
 * {
     margin: 0px !important; 
+    image-rendering: pixelated;
+    filter: contrast(110%) saturate(100%);
+    animation: vhsFlicker 1s infinite;
+}
+@keyframes vhsFlicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.98; }
+  100% { opacity: 1; }
 }
 :root{
     --white-color: white;
+    --black-color: black;
 }

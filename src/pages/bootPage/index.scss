@@ -1,0 +1,45 @@
+.BootSectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    min-height: 100vh;
+    color: var(--white-color);
+        img{
+            background-color: black;
+            max-width: 80%;
+        }
+    .progressBarLoading{
+        border: solid var(--white-color) 1px;
+        width: 200px;
+        span{
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            background-color: blue;
+            border: solid var(--white-color) 1px;
+            animation: progressBar 2s linear infinite;
+        }
+    }
+}
+
+.BootSectionContainer .progressBarLoading {
+    border: 1px solid var(--white-color);
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.BootSectionContainer .progressBarLoading span {
+    display: block;
+    height: 100%;
+    width: 50px;
+    background-color: blue;
+    animation: progressBar 1s linear infinite;
+}
+
+@keyframes progressBar {
+  0% { transform: translateX(-50px); }
+  100% { transform: translateX(200px); }
+}

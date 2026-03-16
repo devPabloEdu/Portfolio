@@ -1,10 +1,10 @@
 import "./App.scss";
-import HomePage from "./pages/home";
+import BootPage from "./pages/bootPage";
 
 function App() {
   return (
       <>
-        <HomePage />
+        <BootPage />
       </>
   );
 }

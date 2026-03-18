@@ -1,10 +1,11 @@
 import "./App.scss";
-import BootPage from "./pages/bootPage";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes";
 
 function App() {
   return (
       <>
-        <BootPage />
+        <RouterProvider router={router} />
       </>
   );
 }

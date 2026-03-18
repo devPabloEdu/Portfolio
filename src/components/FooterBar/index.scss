@@ -4,6 +4,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 1200;
 }
 .buttonWindows{
     background: linear-gradient(180deg,#509d4f,#499e47 69.2%,#48b347),linear-gradient(180deg,#509d4f,#499e47 69.2%,#48b347);
@@ -33,4 +34,12 @@
     padding: 14px;
     font-family: 'tahoma', sans-serif; 
     background: linear-gradient(#0c59b9 1%,#139ee9 6%,#18b5f2,#139beb 14%,#1290e8 19%,#0d8dea 63%,#0d9ff1 81%,#0f9eed 88%,#119be9,#1392e2,#137ed7,#095bc9);
+}
+.menuWindos{
+    background-color: var(--white-color);
+    max-width: 60%;
+    position: absolute;
+    top: 88px;
+    z-index: 1000;
+    bottom: 0;
 }

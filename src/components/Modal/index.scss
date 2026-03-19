@@ -1,0 +1,83 @@
+.topBarModal{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    color: var(--white-color);
+    background: linear-gradient(#0c4d9c 1%,#0e73aa 6%,#1290c2,#1083c5 14%,#1075bd 19%,#0a73be 63%,#0c89d1 81%,#0d8bcf 88%,#0f8ad1,#1189d3,#137ed7,#095bc9);
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'tahoma', sans-serif; 
+    justify-content: space-between;
+        button{
+            background-color: transparent;
+            color: var(--white-color);
+            font-family: 'tahoma', sans-serif;
+            font-size: 20px;
+            width: 40px;
+            padding: 4px;
+            border: solid var(--white-color) 2px;
+        }
+        #closeButton{
+            background: linear-gradient(#ff5c5c,#ff5a5a, #cc0000);
+        }
+        .buttonsContainerModal{
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+        }
+}
+.aboveTopBarModal{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: wheat;
+    .linksAboveModalList{
+        display: flex;
+        gap: 16px;
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: 'tahoma', sans-serif;
+        }
+    }
+}
+.modalBodyContent{
+    background-color: var(--white-color);
+    font-family: 'tahoma', sans-serif;
+}
+.cvBodyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white-color);
+    padding: 10px;
+        .myInfos{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
+            font-family: 'tahoma', sans-serif;
+            font-weight: 500;
+            justify-content: center;
+            font-size: 12px;
+                img{
+                    border-radius: 4px;
+                }
+        }
+        .infosConhecimentos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .brainInfos{
+            font-family: 'tahoma', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 14px;
+        }
+}

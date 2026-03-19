@@ -9,7 +9,7 @@ import skillsIcon from '../../assets/desktopIcons/Skills.webp';
 import contatoIcon from '../../assets/desktopIcons/contato.webp';
 import { FooterBar } from "../../components/FooterBar";
 import entreEmContatoIcon from '../../assets/desktopIcons/entrecontato.webp';
-
+import { Modal } from "../../components/Modal";
 const HomePage = (): React.ReactElement => {
   return (
     <Section className="sectionHomeClass">
@@ -30,6 +30,7 @@ const HomePage = (): React.ReactElement => {
           Entre em contato
         </ContentsIcon>
       </Container>
+      <Modal></Modal>
  
         <FooterBar>         
         </FooterBar>

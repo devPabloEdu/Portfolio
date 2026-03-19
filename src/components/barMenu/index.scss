@@ -9,6 +9,28 @@
     font-size: 20px;
     font-family: 'tahoma', sans-serif; 
 }
+.bottomBarMenu{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    color: var(--white-color);
+    background: linear-gradient(#0c4d9c 1%,#0e73aa 6%,#1290c2,#1083c5 14%,#1075bd 19%,#0a73be 63%,#0c89d1 81%,#0d8bcf 88%,#0f8ad1,#1189d3,#137ed7,#095bc9);
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'tahoma', sans-serif; 
+    justify-content: end;
+        .exitAndRestartButtons{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            color: var(--white-color);
+            font-family: 'tahoma', sans-serif; 
+        }
+}
 .centralMenusContainer{
     display: flex;
     flex-direction: column;

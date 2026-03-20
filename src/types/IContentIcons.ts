@@ -3,4 +3,5 @@ export type IContentIcons = {
     imgSrc: string;
     imgAlternativeTitle: string;
     id?: string;
+    onClick?: React.MouseEventHandler;
 }

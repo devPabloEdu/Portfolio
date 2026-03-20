@@ -16,7 +16,7 @@ import { SiRabbitmq } from "react-icons/si";
 import { FaGitSquare } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
 
-function TopBarModal({ topMenuName = "" }: IModal) {
+function TopBarModal({ topMenuName = "", onClose }: IModal) {
   return (
     <>
       <div className="topBarModal">
@@ -24,7 +24,7 @@ function TopBarModal({ topMenuName = "" }: IModal) {
 
         <div className="buttonsContainerModal">
           <button>_</button>
-          <button id="closeButton">X</button>
+          <button id="closeButton" onClick={onClose}>X</button>
         </div>
       </div>
       <div className="aboveTopBarModal">
@@ -42,69 +42,132 @@ function TopBarModal({ topMenuName = "" }: IModal) {
 
 function ModalBody(type: string) {
   switch (type) {
-    case "cv":
+    case "Meu Cúrriculo":
       return (
         <div className="cvBodyContainer">
           <div className="myInfos">
             <img src={profileImage} alt="Pablo Eduardo" width={120} />
-            <p>
-              Pablo Eduardo
-              <br />
-              Desenvolvedor Full-stack
-              <br />
-              São Paulo, Brasil
-            </p>
-            <p>
-              15/05/2002
-              <br />
-              11 9-3099-9643
-              <br />
-              eduardopablo460@gmail.com
-            </p>
+            <div>
+              <p>Pablo Eduardo</p>
+              <p> São Paulo, Brasil</p>
+              <p>Desenvolvedor Full-stack</p>
+              <p>eduardopablo460@gmail.com</p>
+              <p>15/05/2002</p>
+              <p> 11 9-3099-9643</p>
+            </div>
           </div>
 
           <div className="infosConhecimentos">
-          <div className="brainInfos">
-            <h2>Conhecimentos</h2>
-            <h3>Front-End</h3>
-            <div>
-              <FaHtml5 size={34} />
-              <FaCss3Alt size={34} />
-              <IoLogoJavascript size={34} />
-              <FaReact size={34} />
+            <div className="brainInfos">
+              <h2>Conhecimentos</h2>
+              <h3>Front-End</h3>
+              <div>
+                <FaHtml5 size={34} />
+                <FaCss3Alt size={34} />
+                <IoLogoJavascript size={34} />
+                <FaReact size={34} />
+              </div>
+              <h3>Backend</h3>
+              <div>
+                <FaNodeJs size={34} />
+                <FaPython size={34} />
+                <BsFiletypeSql size={34} />
+                <BiLogoPostgresql size={34} />
+                <TbBrandCSharp size={34} />
+              </div>
+              <h3>Outros</h3>
+              <div>
+                <SiRabbitmq size={34} />
+                <FaGitSquare size={34} />
+                <VscAzure size={34} />
+              </div>
             </div>
-            <h3>Backend</h3>
-            <div>
-              <FaNodeJs size={34} />
-              <FaPython size={34} />
-              <BsFiletypeSql size={34} />
-              <BiLogoPostgresql size={34} />
-              <TbBrandCSharp size={34} />
+            <div className="EducationInfos">
+              <h2>Experiências</h2>
+              <div>
+                <h3>Analista Programador Junior</h3>
+                <p>03/2026 - emprego atual</p>
+                <p>Liberum Ratings</p>
+                <p> São Paulo, Brasil</p>
+                <p>
+                  <IoLogoJavascript size={20} />
+                  <FaReact size={20} />
+                  <FaNodeJs size={20} />
+                  <FaPython size={20} />
+                  <BiLogoPostgresql size={20} />
+                  <SiRabbitmq size={20} />
+                  <FaGitSquare size={20} />
+                  <VscAzure size={20} />
+                </p>
+              </div>
+              <div>
+                <h3>Estágio em Desenvolvimento de Software</h3>
+                <p>03/2025 - 03/2026</p>
+                <p>Liberum Ratings</p>
+                <p> São Paulo, Brasil</p>
+                <p>
+                  <IoLogoJavascript size={20} />
+                  <FaReact size={20} />
+                  <FaNodeJs size={20} />
+                  <FaPython size={20} />
+                  <BiLogoPostgresql size={20} />
+                  <SiRabbitmq size={20} />
+                  <FaGitSquare size={20} />
+                  <VscAzure size={20} />
+                </p>
+              </div>
+              <div>
+                <h3>Desenvolvedor - Freelancer</h3>
+                <p>01/2024 - 03/2025</p>
+                <p> São Paulo, Brasil</p>
+                <p>
+                  <IoLogoJavascript size={20} />
+                  <FaReact size={20} />
+                  <FaNodeJs size={20} />
+                  <FaPython size={20} />
+                  <BiLogoPostgresql size={20} />
+                  <FaGitSquare size={20} />
+                  <TbBrandCSharp size={20} />
+                </p>
+              </div>
+              <div>
+                <h3>Desenvolvedor Voluntário</h3>
+                <p>11/2024 - 01/2025</p>
+                <p>Osasco, São Paulo, Brasil</p>
+                <p>Cedeca - centro de defesa da criança e do adolescente</p>
+                <p>
+                  <IoLogoJavascript size={20} />
+                  <FaReact size={20} />
+                  <BiLogoPostgresql size={20} />
+                  <FaGitSquare size={20} />
+                  <TbBrandCSharp size={20} />
+                </p>
+              </div>
+              <div>
+                <h3>Suporte a Software</h3>
+                <p>06/2024 - 01/2025</p>
+                <p>Barueri, São Paulo, Brasil</p>
+                <p>MUBI - Sistemas de gestão</p>
+              </div>
+
+              <h2>Educação</h2>
+              <div>
+                <h3>Análise e Desenvolvimento de sistemas - Estácio de Sá</h3>
+                <p>01/2024 - 06/2026</p>
+              </div>
             </div>
-            <h3>Outros</h3>
-            <div>
-                <SiRabbitmq size={34}/>
-                <FaGitSquare size={34}/>
-                <VscAzure size={34}/>
-            </div>
-          </div>
-          <div className='EducationInfos'>
-            <h2>Educação</h2>
-            <div>
-                
-            </div>
-          </div>
           </div>
         </div>
       );
   }
 }
 
-export function Modal() {
+export function Modal({modalType = '', onClose} : IModal) {
+  if (!modalType || modalType === '') return null;
   return (
     <div>
-      <TopBarModal topMenuName="teste" />
-      {ModalBody("cv")}
+      <TopBarModal topMenuName={modalType} onClose={onClose}/>
+      {ModalBody(modalType)}
     </div>
   );
 }

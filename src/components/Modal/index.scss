@@ -50,9 +50,12 @@
 .cvBodyContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--white-color);
     padding: 10px;
+    align-items: center;/* ou 60vh, 70vh, etc */
+    max-height: 70vh;
+    overflow-y: auto;
         .myInfos{
             display: flex;
             flex-direction: row;
@@ -61,7 +64,7 @@
             font-family: 'tahoma', sans-serif;
             font-weight: 500;
             justify-content: center;
-            font-size: 12px;
+            font-size: 14px;
                 img{
                     border-radius: 4px;
                 }
@@ -70,6 +73,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column-reverse;
         }
         .brainInfos{
             font-family: 'tahoma', sans-serif;
@@ -79,5 +83,21 @@
             align-items: center;
             padding: 20px;
             gap: 14px;
+        }
+        .EducationInfos{
+            font-family: 'tahoma', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            gap: 12px;
+            h3{
+                font-size: 18px;
+            }
+            p{
+                font-size: 14px;
+            }
         }
 }

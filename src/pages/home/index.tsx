@@ -6,7 +6,6 @@ import { ContentsIcon } from "../../components/ContentsIcon";
 import cvIcon from "../../assets/desktopIcons/cv-icon-lg.webp";
 import projectsIcon from "../../assets/desktopIcons/folder-docs-icon-lg.webp";
 import skillsIcon from "../../assets/desktopIcons/Skills.webp";
-import contatoIcon from "../../assets/desktopIcons/contato.webp";
 import { FooterBar } from "../../components/FooterBar";
 import entreEmContatoIcon from "../../assets/desktopIcons/entrecontato.webp";
 import { Modal } from "../../components/Modal";
@@ -39,6 +38,7 @@ const HomePage = (): React.ReactElement => {
           imgSrc={projectsIcon}
           imgAlternativeTitle="Meus Projetos"
           id="content2"
+          onClick={()=> setModalType("Meus Projetos")}
         >
           Meus Projetos
         </ContentsIcon>
@@ -51,16 +51,10 @@ const HomePage = (): React.ReactElement => {
           Skills
         </ContentsIcon>
         <ContentsIcon
-          imgSrc={contatoIcon}
-          imgAlternativeTitle="Meios de Contato"
-          id="content4"
-        >
-          Contato
-        </ContentsIcon>
-        <ContentsIcon
           imgSrc={entreEmContatoIcon}
           imgAlternativeTitle="Entre em contato"
-          id="content5"
+          id="content4"
+          onClick={()=> setModalType("Entre Em Contato")}
         >
           Entre em contato
         </ContentsIcon>

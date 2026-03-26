@@ -4,7 +4,6 @@ import windowsLogo from "../../assets/windows-icon.webp";
 import cvIcon from "../../assets/menuIcons/cv.webp";
 import myProjectsIcon from "../../assets/menuIcons/myprojects.webp";
 import skillsIcon from "../../assets/desktopIcons/Skills.webp";
-import contactsIcon from "../../assets/desktopIcons/contato.webp";
 import entreEmContatoIcon from "../../assets/desktopIcons/entrecontato.webp";
 import shutdownIcon from "../../assets/menuIcons/desligar.webp";
 import restartIcon from "../../assets/menuIcons/restart.webp";
@@ -76,7 +75,12 @@ export function CentralMenuWindows() {
         </div>
         <div className="centralMenuIcon">
           <img src={myProjectsIcon} alt="Meus Projetos" />
-          <div>
+          <div
+            onClick={() => {
+              openModalWindow("Meus Projetos");
+              closeMenuModal();
+            }}
+          >
             <p>Meus Projetos</p>
             <span>Visualize todos os meus projetos</span>
           </div>
@@ -94,15 +98,13 @@ export function CentralMenuWindows() {
           </div>
         </div>
         <div className="centralMenuIcon">
-          <img src={contactsIcon} alt="Meus Contatos" width={34} />
-          <div>
-            <p>Contato</p>
-            <span>Visualize todos os meus contatos</span>
-          </div>
-        </div>
-        <div className="centralMenuIcon">
           <img src={entreEmContatoIcon} alt="Entre em contato" width={34} />
-          <div>
+          <div
+            onClick={() => {
+              openModalWindow("Entre Em Contato");
+              closeMenuModal();
+            }}
+          >
             <p>Entre em contato</p>
             <span>Me envie um e-mail</span>
           </div>

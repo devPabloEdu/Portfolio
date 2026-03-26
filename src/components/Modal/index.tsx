@@ -15,6 +15,10 @@ import { SiRabbitmq } from "react-icons/si";
 import { FaGitSquare } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
 import { FaComputer } from "react-icons/fa6";
+import { ProjectsContent } from "../projectsContent";
+import { BsTypescript } from "react-icons/bs";
+import CedecaImage from "../../assets/projectsImages/cedecaImage.jfif";
+import registroDePontosImage from "../../assets/projectsImages/registroPontos.png";
 
 function TopBarModal({ topMenuName = "", onClose }: IModal) {
   return (
@@ -68,6 +72,7 @@ function ModalBody(type: string) {
                 <FaCss3Alt size={34} />
                 <IoLogoJavascript size={34} />
                 <FaReact size={34} />
+                <BsTypescript size={34} />
               </div>
               <h3>Backend</h3>
               <div>
@@ -76,6 +81,7 @@ function ModalBody(type: string) {
                 <BsFiletypeSql size={34} />
                 <BiLogoPostgresql size={34} />
                 <TbBrandCSharp size={34} />
+                <BsTypescript size={34} />
               </div>
               <h3>Outros</h3>
               <div>
@@ -100,6 +106,7 @@ function ModalBody(type: string) {
                   <SiRabbitmq size={20} />
                   <FaGitSquare size={20} />
                   <VscAzure size={20} />
+                  <BsTypescript size={20} />
                 </p>
               </div>
               <div>
@@ -116,6 +123,7 @@ function ModalBody(type: string) {
                   <SiRabbitmq size={20} />
                   <FaGitSquare size={20} />
                   <VscAzure size={20} />
+                  <BsTypescript size={20} />
                 </p>
               </div>
               <div>
@@ -130,6 +138,7 @@ function ModalBody(type: string) {
                   <BiLogoPostgresql size={20} />
                   <FaGitSquare size={20} />
                   <TbBrandCSharp size={20} />
+                  <BsTypescript size={20} />
                 </p>
               </div>
               <div>
@@ -143,6 +152,7 @@ function ModalBody(type: string) {
                   <BiLogoPostgresql size={20} />
                   <FaGitSquare size={20} />
                   <TbBrandCSharp size={20} />
+                  <BsTypescript size={20} />
                 </p>
               </div>
               <div>
@@ -161,12 +171,13 @@ function ModalBody(type: string) {
           </div>
         </div>
       );
-      break;
     case "Skills":
       return (
         <div className="SkillsBodyContainer">
           <div className="MySkillsInfo">
-            <h2><FaComputer size={36}/> Minhas Habilidades</h2>
+            <h2>
+              <FaComputer size={36} /> Minhas Habilidades
+            </h2>
             <div className="areaSkills">
               <div>
                 <h3>Front-End</h3>
@@ -175,6 +186,7 @@ function ModalBody(type: string) {
                   <FaCss3Alt size={34} />
                   <IoLogoJavascript size={34} />
                   <FaReact size={34} />
+                  <BsTypescript size={34} />
                 </div>
               </div>
               <div>
@@ -185,6 +197,7 @@ function ModalBody(type: string) {
                   <BsFiletypeSql size={34} />
                   <BiLogoPostgresql size={34} />
                   <TbBrandCSharp size={34} />
+                  <BsTypescript size={34} />
                 </div>
               </div>
               <div>
@@ -199,6 +212,52 @@ function ModalBody(type: string) {
           </div>
         </div>
       );
+    case "Meus Projetos":
+      return (
+        <div className="myProjectsContainer">
+          <h2>Meus Projetos</h2>
+          <div className="projectsContent">
+            <ProjectsContent
+              projectName="Sistema de Registro de pontos"
+              projectDescription="Com a interface simples, o usuário pode facilmente registrar ou excluir seus pontos, visualizar os horários registrados e receber feedback em tempo real sobre suas ações."
+              ProjectAcessUrl="https://github.com/devPabloEdu/Hora-Certa---Sistema-de-registro-de-pontos"
+              ProjectYear="2024/2025"
+              projectImageUrl={registroDePontosImage}
+            >
+              <TbBrandCSharp size={30} />
+              <BsTypescript size={30} />
+              <FaReact size={30} />
+              <BsFiletypeSql size={30} />
+            </ProjectsContent>
+            <ProjectsContent
+              projectName="Cedeca Osasco - Institucional"
+              projectDescription="Desenvolvi um site completo, com noticias, autenticação, publicações e informações sobre uma ONG que atua na região de Osasco oferecendo suporte a crianças em situação de vulnerabilidade social, adultos, e atendimentos psicológicos e psicopedagógicos, entre outros serviços essenciais."
+              ProjectAcessUrl="https://github.com/devPabloEdu/Projeto-Cedeca-Osasco"
+              ProjectYear="2024"
+              projectImageUrl={CedecaImage}
+            >
+              <TbBrandCSharp size={30} />
+              <BsTypescript size={30} />
+              <FaReact size={30} />
+              <BsFiletypeSql size={30} />
+            </ProjectsContent>
+            <ProjectsContent
+              projectName="Cedeca Osasco - Institucional"
+              projectDescription="Desenvolvi um site completo, com noticias, autenticação, publicações e informações sobre uma ONG que atua na região de Osasco oferecendo suporte a crianças em situação de vulnerabilidade social, adultos, e atendimentos psicológicos e psicopedagógicos, entre outros serviços essenciais."
+              ProjectAcessUrl="https://github.com/devPabloEdu/Projeto-Cedeca-Osasco"
+              ProjectYear="2024"
+              projectImageUrl={CedecaImage}
+            >
+              <TbBrandCSharp size={30} />
+              <BsTypescript size={30} />
+              <FaReact size={30} />
+              <BsFiletypeSql size={30} />
+            </ProjectsContent>
+          </div>
+        </div>
+      );
+    case "Entre Em Contato":
+      return <div>Em Desenvolvimento...</div>;
   }
 }
 

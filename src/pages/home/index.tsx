@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import { Section } from "../../components/Section/index";
 import { Container } from "../../components/Container/index";
@@ -11,8 +11,19 @@ import { FooterBar } from "../../components/FooterBar";
 import entreEmContatoIcon from "../../assets/desktopIcons/entrecontato.webp";
 import { Modal } from "../../components/Modal";
 const HomePage = (): React.ReactElement => {
-  const [modalType, setModalType] = useState<string>('');
+  const [modalType, setModalType] = useState<string>("");
 
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function handleOpenModal(event: any) {
+      setModalType(event.detail);
+    }
+
+    window.addEventListener("openModal", handleOpenModal);
+    return () => {
+      window.removeEventListener("openModal", handleOpenModal);
+    };
+  });
   return (
     <Section className="sectionHomeClass">
       <Container className="parentGridContainer">
@@ -20,7 +31,7 @@ const HomePage = (): React.ReactElement => {
           imgSrc={cvIcon}
           imgAlternativeTitle="Meu Cúrriculo"
           id="content1"
-          onClick={()=>setModalType('Meu Cúrriculo')}
+          onClick={() => setModalType("Meu Cúrriculo")}
         >
           Meu Cúrriculo
         </ContentsIcon>
@@ -35,7 +46,7 @@ const HomePage = (): React.ReactElement => {
           imgSrc={skillsIcon}
           imgAlternativeTitle="Minhas Habilidades"
           id="content3"
-          onClick={()=>setModalType('Meu Cúrriculo')}
+          onClick={() => setModalType("Skills")}
         >
           Skills
         </ContentsIcon>
@@ -56,7 +67,7 @@ const HomePage = (): React.ReactElement => {
       </Container>
       <Container className="modalContainer">
         <Modal modalType={modalType} onClose={() => setModalType("")} />
-      </Container> 
+      </Container>
 
       <FooterBar></FooterBar>
     </Section>

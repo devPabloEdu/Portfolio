@@ -1,16 +1,28 @@
 import "./index.scss";
 import WindowsLogo from "../../assets/windows-icon.webp";
 import { MenuWindows } from "../barMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function FooterBar() {
   const [show, setShow] = useState<boolean>(false);
   const hourNow = new Date().getHours();
   const minutesNow = new Date().getMinutes();
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function handleCloseMenu(event: any) {
+      setShow(event.detail);
+    }
+
+    window.addEventListener("closeMenu", handleCloseMenu);
+    return () => {
+      window.removeEventListener("closeMenu", handleCloseMenu);
+    };
+  });
   return (
     <>
       <div className="menuWindos">
-        <MenuWindows show={show}/>
+        <MenuWindows show={show} />
       </div>
       <footer className="footerWindowsClassName">
         <div>

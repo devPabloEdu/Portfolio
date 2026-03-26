@@ -9,8 +9,6 @@ import entreEmContatoIcon from "../../assets/desktopIcons/entrecontato.webp";
 import shutdownIcon from "../../assets/menuIcons/desligar.webp";
 import restartIcon from "../../assets/menuIcons/restart.webp";
 import { useNavigate } from "react-router-dom";
-import { Modal } from "../Modal";
-import { useState } from "react";
 
 export function TopBarMenu({ position = "top" }: IMenus) {
   const navigate = useNavigate();
@@ -44,15 +42,34 @@ export function TopBarMenu({ position = "top" }: IMenus) {
   );
 }
 
+function closeMenuModal() {
+  window.dispatchEvent(
+    new CustomEvent("closeMenu", {
+      detail: false,
+    }),
+  );
+}
+
+function openModalWindow(detailType: string) {
+  window.dispatchEvent(
+    new CustomEvent("openModal", {
+      detail: `${detailType}`,
+    }),
+  );
+}
+
 export function CentralMenuWindows() {
-  const [modalType, setModalType] = useState<string>("");
   return (
     <>
-      <Modal modalType={modalType} onClose={() => setModalType("")} />
       <div className="centralMenusContainer">
         <div className="centralMenuIcon">
           <img src={cvIcon} alt="Ícone Cúrriculo" />
-          <div onClick={() => setModalType("Meu Cúrriculo")}>
+          <div
+            onClick={() => {
+              openModalWindow("Meu Cúrriculo");
+              closeMenuModal();
+            }}
+          >
             <p>Meu Cúrriculo</p>
             <span>Visualize ou faça o download do meu curriculo</span>
           </div>
@@ -66,7 +83,12 @@ export function CentralMenuWindows() {
         </div>
         <div className="centralMenuIcon">
           <img src={skillsIcon} alt="Minhas Habilidades" width={34} />
-          <div>
+          <div
+            onClick={() => {
+              openModalWindow("Skills");
+              closeMenuModal();
+            }}
+          >
             <p>Skills</p>
             <span>Visualize todas as minhas Soft's e Hard's Skills</span>
           </div>

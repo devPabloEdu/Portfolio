@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.scss";
 import type { IModal } from "../../types/IModal";
 import windowsIcon from "../../assets/windows-icon.webp";
@@ -15,6 +14,7 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { SiRabbitmq } from "react-icons/si";
 import { FaGitSquare } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
+import { FaComputer } from "react-icons/fa6";
 
 function TopBarModal({ topMenuName = "", onClose }: IModal) {
   return (
@@ -24,7 +24,9 @@ function TopBarModal({ topMenuName = "", onClose }: IModal) {
 
         <div className="buttonsContainerModal">
           <button>_</button>
-          <button id="closeButton" onClick={onClose}>X</button>
+          <button id="closeButton" onClick={onClose}>
+            X
+          </button>
         </div>
       </div>
       <div className="aboveTopBarModal">
@@ -159,14 +161,52 @@ function ModalBody(type: string) {
           </div>
         </div>
       );
+      break;
+    case "Skills":
+      return (
+        <div className="SkillsBodyContainer">
+          <div className="MySkillsInfo">
+            <h2><FaComputer size={36}/> Minhas Habilidades</h2>
+            <div className="areaSkills">
+              <div>
+                <h3>Front-End</h3>
+                <div>
+                  <FaHtml5 size={34} />
+                  <FaCss3Alt size={34} />
+                  <IoLogoJavascript size={34} />
+                  <FaReact size={34} />
+                </div>
+              </div>
+              <div>
+                <h3>Backend</h3>
+                <div>
+                  <FaNodeJs size={34} />
+                  <FaPython size={34} />
+                  <BsFiletypeSql size={34} />
+                  <BiLogoPostgresql size={34} />
+                  <TbBrandCSharp size={34} />
+                </div>
+              </div>
+              <div>
+                <h3>Outros</h3>
+                <div>
+                  <SiRabbitmq size={34} />
+                  <FaGitSquare size={34} />
+                  <VscAzure size={34} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
   }
 }
 
-export function Modal({modalType = '', onClose} : IModal) {
-  if (!modalType || modalType === '') return null;
+export function Modal({ modalType = "", onClose }: IModal) {
+  if (!modalType || modalType === "") return null;
   return (
-    <div>
-      <TopBarModal topMenuName={modalType} onClose={onClose}/>
+    <div className="modalClass">
+      <TopBarModal topMenuName={modalType} onClose={onClose} />
       {ModalBody(modalType)}
     </div>
   );

@@ -48,7 +48,7 @@ const HomePage = (): React.ReactElement => {
           id="content3"
           onClick={() => setModalType("Skills")}
         >
-          Skills
+          Minhas Skills
         </ContentsIcon>
         <ContentsIcon
           imgSrc={entreEmContatoIcon}

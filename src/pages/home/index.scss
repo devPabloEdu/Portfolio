@@ -53,3 +53,14 @@
     z-index: 1000;
     bottom: 0;
 }
+
+@media (min-width: 800px){
+    .sectionHomeClass{
+        .parentGridContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+    }
+}

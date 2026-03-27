@@ -19,6 +19,9 @@ import { ProjectsContent } from "../projectsContent";
 import { BsTypescript } from "react-icons/bs";
 import CedecaImage from "../../assets/projectsImages/cedecaImage.jfif";
 import registroDePontosImage from "../../assets/projectsImages/registroPontos.png";
+import { FaDocker } from "react-icons/fa";
+import barbeariaImage from "../../assets/projectsImages/barbearia.png";
+import { useState } from "react";
 
 function TopBarModal({ topMenuName = "", onClose }: IModal) {
   return (
@@ -46,7 +49,22 @@ function TopBarModal({ topMenuName = "", onClose }: IModal) {
   );
 }
 
-function ModalBody(type: string) {
+function ModalBody({ type }: { type: string }) {
+  const [name, setName]= useState("");
+  const [contact, setContact]= useState<string>("");
+  const [about, setAbout]= useState<string>("");
+  const [text, setText] = useState<string>("");
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function teste(e: any) {
+    e.preventDefault();
+
+    alert(
+      `nome : ${name} contato : ${contact} about : ${about} text : ${text}`
+    )
+  }
+
+
   switch (type) {
     case "Meu Cúrriculo":
       return (
@@ -88,6 +106,7 @@ function ModalBody(type: string) {
                 <SiRabbitmq size={34} />
                 <FaGitSquare size={34} />
                 <VscAzure size={34} />
+                <FaDocker size={34} />
               </div>
             </div>
             <div className="EducationInfos">
@@ -107,6 +126,7 @@ function ModalBody(type: string) {
                   <FaGitSquare size={20} />
                   <VscAzure size={20} />
                   <BsTypescript size={20} />
+                  <FaDocker size={20} />
                 </p>
               </div>
               <div>
@@ -124,6 +144,7 @@ function ModalBody(type: string) {
                   <FaGitSquare size={20} />
                   <VscAzure size={20} />
                   <BsTypescript size={20} />
+                  <FaDocker size={20} />
                 </p>
               </div>
               <div>
@@ -139,6 +160,7 @@ function ModalBody(type: string) {
                   <FaGitSquare size={20} />
                   <TbBrandCSharp size={20} />
                   <BsTypescript size={20} />
+                  <FaDocker size={20} />
                 </p>
               </div>
               <div>
@@ -206,6 +228,7 @@ function ModalBody(type: string) {
                   <SiRabbitmq size={34} />
                   <FaGitSquare size={34} />
                   <VscAzure size={34} />
+                  <FaDocker size={34} />
                 </div>
               </div>
             </div>
@@ -242,22 +265,44 @@ function ModalBody(type: string) {
               <BsFiletypeSql size={30} />
             </ProjectsContent>
             <ProjectsContent
-              projectName="Cedeca Osasco - Institucional"
-              projectDescription="Desenvolvi um site completo, com noticias, autenticação, publicações e informações sobre uma ONG que atua na região de Osasco oferecendo suporte a crianças em situação de vulnerabilidade social, adultos, e atendimentos psicológicos e psicopedagógicos, entre outros serviços essenciais."
-              ProjectAcessUrl="https://github.com/devPabloEdu/Projeto-Cedeca-Osasco"
-              ProjectYear="2024"
-              projectImageUrl={CedecaImage}
+              projectName="Landing page Barbearia - meu 1º projeto"
+              projectDescription="Desenvolvi um site para um empreendedor da minha região, com o objetivo de divulgar seu
+              trabalho e atuar como um sistema de agendamentos. Criei um sistema de agendamentos
+              via SMTP utilizando o framework Express.js, onde o usuário pode informar seu nome,
+              endereço, o serviço desejado, além de escolher o dia e a hora, feito isso, o agendamento é
+              enviado ao e-mail pessoal do empreendedor."
+              ProjectAcessUrl="https://github.com/devPabloEdu/AndradeBarbearia"
+              ProjectYear="2023/2024"
+              projectImageUrl={barbeariaImage}
             >
-              <TbBrandCSharp size={30} />
               <BsTypescript size={30} />
               <FaReact size={30} />
-              <BsFiletypeSql size={30} />
+              <FaCss3Alt size={34} />
             </ProjectsContent>
           </div>
         </div>
       );
     case "Entre Em Contato":
-      return <div>Em Desenvolvimento...</div>;
+      return (
+        <div className="formContainer">
+          <form onSubmit={teste}>
+            <div className="formEmailContainerHeader">
+              <div>
+                <p>Seu Nome: </p>
+                <input type="text" placeholder="Seu nome" onChange={(e) => setName(e.target.value)}/>
+                <p>Seu contato:</p>
+                <input type="text" placeholder="Seu e-mail ou contato" onChange={(e) => setContact(e.target.value)}/>
+                <p>Assunto:</p>
+                <input type="text" placeholder="Assunto do e-mail" onChange={(e) => setAbout(e.target.value)}/>
+              </div>
+            </div>
+            <textarea placeholder="Insira sua mensagem aqui" onChange={(e) => setText(e.target.value)}></textarea>
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      );
   }
 }
 
@@ -266,7 +311,7 @@ export function Modal({ modalType = "", onClose }: IModal) {
   return (
     <div className="modalClass">
       <TopBarModal topMenuName={modalType} onClose={onClose} />
-      {ModalBody(modalType)}
+      <ModalBody type={modalType} />
     </div>
   );
 }

@@ -22,7 +22,11 @@
             border: solid var(--white-color) 2px;
         }
         #closeButton{
+            cursor: pointer;
             background: linear-gradient(#ff5c5c,#ff5a5a, #cc0000);
+        }
+        #closeButton:hover{
+            background: linear-gradient(#f86363,#fa6767, #fd1c1c);
         }
         .buttonsContainerModal{
             display: flex;
@@ -159,4 +163,46 @@
             align-items: center;
             gap: 18px;
         }
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .formEmailContainerHeader{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 12px;
+        gap: 22px;
+        justify-content: center;
+        background-color: rgb(243, 218, 170);
+        border-bottom: solid rgba(0, 0, 0, 0.384) 1px;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 12px;
+                p{
+                   font-family: 'tahoma', sans-serif; 
+                }
+        }
+        input{
+            width: 350px;
+        }
+    }
+    textarea{
+        margin: 8px !important;
+        padding: 6px;
+        width: 80%;
+        height: 300px;
+    }
+    button{
+        background-color: rgb(243, 218, 170);
+        border: solid black 1px;
+        height: 40px;
+        width: 100px;
+        margin: 12px !important;
+        cursor: pointer;
+    }
 }

@@ -1,7 +1,7 @@
 ## Meu Portfolio
 
 ![Language](https://img.shields.io/badge/TYPESCRIPT-blue)![Language](https://img.shields.io/badge/Javascript-yellow) ![Language](https://img.shields.io/badge/React-blue) ![Language](https://img.shields.io/badge/scss-pink)
-Um projeto inspirado na estética do windows xp
+<br>Um projeto inspirado na estética do windows xp
 
 <p align="center">
   <img src="./src/assets/readmeImages/bootPage.png" height="100%" width="100%">

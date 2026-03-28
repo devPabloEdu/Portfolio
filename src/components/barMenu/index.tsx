@@ -8,9 +8,16 @@ import entreEmContatoIcon from "../../assets/desktopIcons/entrecontato.webp";
 import shutdownIcon from "../../assets/menuIcons/desligar.webp";
 import restartIcon from "../../assets/menuIcons/restart.webp";
 import { useNavigate } from "react-router-dom";
+import shutdownSoundWindos from '../../assets/sounds/shutdown-windows.mp3';
 
 export function TopBarMenu({ position = "top" }: IMenus) {
   const navigate = useNavigate();
+
+  function shutdownWindows() {
+    const sound = new Audio(shutdownSoundWindos);
+    sound.play();
+    navigate("/")
+  }
   return (
     <div>
       {position === "top" ? (
@@ -24,13 +31,13 @@ export function TopBarMenu({ position = "top" }: IMenus) {
             <img
               src={restartIcon}
               alt="Reiniciar o Computador"
-              onClick={() => navigate("/")}
+              onClick={shutdownWindows}
             />
             Reiniciar
           </button>
           <button
             className="exitAndRestartButtons"
-            onClick={() => navigate("/")}
+            onClick={shutdownWindows}
           >
             <img src={shutdownIcon} alt="Desligar o Computador" />
             Desligar

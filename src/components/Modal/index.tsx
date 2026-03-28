@@ -22,6 +22,7 @@ import registroDePontosImage from "../../assets/projectsImages/registroPontos.pn
 import { FaDocker } from "react-icons/fa";
 import barbeariaImage from "../../assets/projectsImages/barbearia.png";
 import { useState } from "react";
+import emailjs from '@emailjs/browser'
 
 function TopBarModal({ topMenuName = "", onClose }: IModal) {
   return (
@@ -59,9 +60,13 @@ function ModalBody({ type }: { type: string }) {
   function teste(e: any) {
     e.preventDefault();
 
-    alert(
-      `nome : ${name} contato : ${contact} about : ${about} text : ${text}`
-    )
+    const templateParams = {
+      name: name,
+      contact: contact,
+      about: about,
+      message: text
+    }
+    emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams, import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }
 
 

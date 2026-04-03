@@ -80,9 +80,7 @@ function ModalBody({ type }: { type: string }) {
               <p>Pablo Eduardo</p>
               <p> São Paulo, Brasil</p>
               <p>Desenvolvedor Full-stack</p>
-              <p>eduardopablo460@gmail.com</p>
               <p>15/05/2002</p>
-              <p> 11 9-3099-9643</p>
             </div>
           </div>
 

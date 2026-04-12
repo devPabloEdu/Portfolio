@@ -19,7 +19,7 @@ const BootPage = (): React.ReactElement => {
   useEffect(() => {
     const timer = setTimeout(() => {
       playSound();
-    }, 10000);
+    }, 5000);
     return () => clearTimeout(timer);
   });
 

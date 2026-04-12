@@ -29,6 +29,7 @@
             border: none;
             color: var(--white-color);
             font-family: 'tahoma', sans-serif; 
+            cursor: pointer;
         }
 }
 .centralMenusContainer{
@@ -62,6 +63,7 @@
 .centralMenuIcon:hover{
     background-color: blue;
     color: var(--white-color);
+    cursor: pointer;
     span{
         color: var(--white-color);
     }

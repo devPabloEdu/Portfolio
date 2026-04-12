@@ -28,6 +28,7 @@
 }
 .buttonWindows:hover{
     background: linear-gradient(180deg,#67c266,#68cf66 69.2%,#5dd35b),linear-gradient(180deg,#70c76e,#67ce66 69.2%,#66da64);
+    cursor: pointer;
 }
 .endBarFooter{
     color: var(--white-color);
@@ -101,6 +102,6 @@
 }
 @media (min-width: 1024px){
     .menuWindos{
-        top: 29%;
+        top: 31.9%;
     }
 }

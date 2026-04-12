@@ -178,14 +178,13 @@
         flex-direction: column;
         align-items: start;
         padding: 12px;
-        gap: 22px;
         justify-content: center;
         background-color: rgb(243, 218, 170);
         border-bottom: solid rgba(0, 0, 0, 0.384) 1px;
         div{
             display: flex;
-            flex-direction: column;
-            align-items: start;
+            flex-direction: row;
+            align-items: center;
             justify-content: center;
             gap: 12px;
                 p{

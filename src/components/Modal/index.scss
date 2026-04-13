@@ -169,7 +169,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    max-height: 70vh;
+    height: 70vh;
     overflow-y: auto;
     gap: 12px;
     padding: 10px;
@@ -183,8 +183,7 @@
         border-bottom: solid rgba(0, 0, 0, 0.384) 1px;
         div{
             display: flex;
-            flex-direction: row;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
             gap: 12px;
                 p{
@@ -199,7 +198,7 @@
         margin: 8px !important;
         padding: 6px;
         width: 80%;
-        height: 300px;
+        height: 250px;
     }
     button{
         background-color: rgb(243, 218, 170);

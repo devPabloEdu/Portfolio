@@ -40,68 +40,7 @@
     background-color: var(--white-color);
     max-width: 60%;
     position: absolute;
-    top: 42%;
+    transform: translate(0%, -12%);
     z-index: 1000;
     bottom: 0;
-}
-
-@media (min-width: 360px) {
-    .menuWindos{
-        top: 34%;
-    }
-}
-@media (min-width: 375px) {
-    .menuWindos{
-        top: 27%;
-    }
-}
-@media (min-width: 390px) {
-    .menuWindos{
-        top: 42%;
-    }
-}
-@media (min-width: 412px) {
-    .menuWindos{
-        top: 48%;
-    }
-}
-@media (min-width: 430px) {
-    .menuWindos{
-        top: 50%;
-    }
-}
-@media (min-width: 540px) {
-    .menuWindos{
-        top: 40%;
-    }
-}
-@media (min-width: 700px) {
-    .menuWindos{
-        top: 58%;
-    }
-}
-@media (min-width: 798px) {
-    .menuWindos{
-        top: 42%;
-    }
-}
-@media (min-width: 800px) {
-    .menuWindos{
-        top: 64%;
-    }
-}
-@media (min-width: 900px) {
-    .menuWindos{
-        top: 69%;
-    }
-}
-@media (min-width: 1024px) and (max-height: 600px) {
-    .menuWindos{
-        top: 29%;
-    }
-}
-@media (min-width: 1024px){
-    .menuWindos{
-        top: 31.9%;
-    }
 }
